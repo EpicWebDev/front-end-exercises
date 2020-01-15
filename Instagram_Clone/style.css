@@ -1,0 +1,60 @@
+body{
+    background-color: #f6f6f6;
+    margin: 0 0;
+     padding: 0 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.main-section{
+    display: flex;
+    max-width: 880px;
+    margin: auto;
+}
+
+.login-picture{
+    padding: 60px 20px;
+}
+
+#image-replacement{
+    height: 600px;
+    width: 400px;
+    background-color: magenta;
+}
+
+.main-form{
+    padding-top: 2px;
+    padding-right: 62px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+.login-section{
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding: 15px 25px;
+
+}
+
+.app-name{
+    color: black;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 18px 0;
+}
+
+.app-description{
+    padding: 0px 10px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #aaaaaa;
+    text-align: center;
+    line-height: 1.2;
+}
