@@ -11,24 +11,51 @@
     <div class="container">
         <div class="main-section">
             <div class="login-picture">
-                <div id="image-replacement"></div>
+                <img src="images/main_phones.png" alt="">
             </div>
             <div class="main-form">
                 <div class="login-section">
                     <div class="app-name">Instagram</div>
                     <div class="app-description">Sign up to see photos and videos from your friends</div>
-                    <div class="fb-sign-in-link"><a href="#"><div class="fb-button"></div></a></div>
-                    <div id="or"></div>
-                    <div class="sign-up-form"></div>
-                    <div class="terms"></div>
+                    <div class="signin-signup-form">
+                        <form action="signup.php" method="post">
+                            <input type="button" class="fb-login" value="Log in with Facebook" onclick="window.location.href = 'http://facebook.com';" >
+                            <fieldset>
+                                <legend align="center">OR</legend>
+                                <input type="text" class="main-form-input" name="email-or-mobile" placeholder="Mobile Number or Email">
+                                <input type="text" class="main-form-input" name="name" placeholder="Full Name">
+                                <input type="text" class="main-form-input" name="username" placeholder="Username">
+                                <input type="password" class="main-form-input" name="password" placeholder="Password">
+                                <input type="submit" id="signup-btn" value="Sign Up">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="terms">By signing up, you agree to our <b>Terms</b> , <b>Data Policy</b> and <b>Cookies Policy</b> .</div>
                 </div>
-                <div class="sign-in-link"></div>
-                <div class="mobile-link"></div>
+                <div class="sign-in-link">Have an account? <a href="#">Log in</a></div>
+                <div class="mobile-link">
+                    <div class="app-prompt">Get the app.</div>
+                    <div class="app-links"><a class="appstore" href="#"></a><a class="googleplay" href="#"></a></div>
+                </div>
             </div>
         </div>
         <div class="footer">
-            <div class="main-links"></div>
-            <div class="copyright"></div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">help</a></li>
+                        <li><a href="#">press</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Profiles</a></li>
+                        <li><a href="#">Hashtags</a></li>
+                        <li><a href="#">Language</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">© 2020 INSTAGRAM FROM FACEBOOK</div>
         </div>
     </div>
 </body>
