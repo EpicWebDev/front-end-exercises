@@ -1,7 +1,70 @@
 .top-nav{
-    height: 100px;
+    height: 98px;
+    padding: 0px 65px;
     border-bottom: 1px solid #dfdfdf;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.top-left{
+    display: flex;
+    align-items: center;
+}
+
+.nav-title{
+    display: inline-block;
+    border-left: 1px solid #9f9f9f;
+    margin-left: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup{
+    color: rgb(237, 74, 85);
+    font-size:  18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-nav{
+    border-bottom: 1px solid #dfdfdf;
+}
+.bottom-nav ul{
+    height: 80px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+.bottom-nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: inline-block;
+}
+.bottom-nav ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    height: 100%;
+    color: rgb(159,159,159);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.bottom-nav ul li a:hover{
+    color: #333333;
+    border-bottom: 1px solid #333333;
+    text-decoration: none;
+}
+.bottom-nav ul li a:visited{
+    text-decoration: none;
+}
+#selected{
+    color: rgb(237, 74, 85);
+    border-bottom: 1px solid rgb(237, 74, 85);
 }
