@@ -1,0 +1,59 @@
+table.one{
+    empty-cells: show;
+    border-spacing: 10px;
+}
+
+table.two{
+    empty-cells: hide;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+}
+
+fieldset{
+    width: 350px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+}
+fieldset legend{
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+#form-name-input{
+    display: block;
+    color: #454545;
+    font-size: 120%;
+    padding: 5px;
+    background-color: #eeeeee;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+#form-name-input:focus{
+    border: 1px solid #b1e1e4;
+}
+
+.submit{
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    background-color: #b9e4e3;
+    border-bottom: 2px solid #b2b2b2;
+
+}
+.submit:hover{
+    border: 1px solid #a4a4a4;
+    border-top: 2px solid #b2b2b2;
+    background: gradient(linear, left top,
+ left bottom, from(#a8cfce), to(#beeae9));
+
+}
