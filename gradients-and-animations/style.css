@@ -1,0 +1,43 @@
+body{
+    background: linear-gradient(to left, #2fbe04b9, #ee3510b0, #bcc200af);
+    background-size: 600% 600%;
+    animation: bg-change 10s ease 0s infinite forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 200px;
+    text-align: center;
+    height: 200px;
+}
+
+h1{
+    font-family: 'Open Sans', Arial;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 22px;
+    color: white;
+}
+p{
+    font-family: 'Open Sans', Arial;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: white;
+}
+
+@keyframes bg-change{
+    from{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    to{
+        background-position: 0% 50%;
+    }
+}
