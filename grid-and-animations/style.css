@@ -1,0 +1,135 @@
+body{
+    background-color: rgb(44, 42, 42);
+}
+.grid-container{
+    display: grid;
+    height: 95vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.grid-item .anim2{
+    height: 100%;
+    animation: shrink 0.4s ease-out 3s;
+}
+.grid-item:nth-child(1) .anim2{
+    animation-delay: 2s;
+}
+.grid-item:nth-child(4) .anim2{
+    animation-delay: 2.05s;
+}
+.grid-item:nth-child(7) .anim2{
+    animation-delay: 2.1s;
+}
+.grid-item:nth-child(2) .anim2{
+    animation-delay: 2.15s;
+}
+.grid-item:nth-child(5) .anim2{
+    animation-delay: 2.2s;
+}
+.grid-item:nth-child(8) .anim2{
+    animation-delay: 2.25s;
+}
+.grid-item:nth-child(3) .anim2{
+    animation-delay: 2.3s;
+}
+.grid-item:nth-child(6) .anim2{
+    animation-delay: 2.35s;
+}
+.grid-item:nth-child(9) .anim2{
+    animation-delay: 2.4s;
+}
+
+.grid-item .anim1{
+    height: 100%;
+    background-color: #555;
+    /*background: linear-gradient(to right, rgba(51, 51, 51, 0.39), rgba(129, 56, 120, 0.404), rgba(99, 57, 204, 0.329), rgba(106, 106, 153, 0.322), rgba(51, 51, 51, 0.39));*/
+    border-radius: 15px;
+    border: 1px solid #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: flash;
+    animation-timing-function: ease-out;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    transition: 0.3s ease-out;
+}
+.grid-item .anim1:hover{
+    transition: 0.2s ease-out;
+    background-color: #666;
+}
+
+.grid-item:nth-child(2) .anim1, .grid-item:nth-child(4) .anim1{
+    animation-delay: 3.1s;
+}
+.grid-item:nth-child(3) .anim1, .grid-item:nth-child(5) .anim1, .grid-item:nth-child(7) .anim1{
+    animation-delay: 3.2s;
+}
+.grid-item:nth-child(6) .anim1, .grid-item:nth-child(8) .anim1{
+    animation-delay: 3.3s;
+}
+.grid-item:nth-child(9) .anim1{
+    animation-delay: 3.4s;
+}
+
+.grid-item{
+    opacity: 0.1;
+    animation: opac 1.5s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+    transition: 0.5s ease-out;
+}
+.grid-item:nth-child(3n+1){
+    animation-delay: 1s;
+}
+.grid-item:nth-child(3n){
+    animation-delay: 1.4s;
+}
+
+.grid-item:hover{
+    transform: scale(1.02, 1.02);
+    transition: 0.5s ease-out;
+}
+
+.grid-item p{
+    font-family: 'Open Sans', Arial;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #ddd;
+    font-size: 20px;
+}
+
+@keyframes flash{
+    from{
+        background-color: #555;
+    }
+    10%{
+        background-color: white;
+    }
+    to{
+        background-color: #555;
+    }
+}
+@keyframes opac{
+    from{
+        opacity: 0.1;
+    }
+    
+    to{
+        opacity: 1;
+    }
+}
+@keyframes shrink{
+    from{
+        transform: scale(1);
+    }
+    30%{
+        transform: scale(1.03);
+    }
+    to{
+        transform: scale(1);
+    }
+}
