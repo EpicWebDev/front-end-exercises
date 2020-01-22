@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>No Javascript memory minesweeper</h1>
+        <p class="description">Click the treasure don't click the bomb</p>
+        <table>
+            <tr>
+                <td><a class="cell" href="#lose"></a></td>
+                <td><a class="cell" href="#1-2"></a></td>
+                <td><a class="cell" href="#lose"></a></td>
+            </tr>
+            <tr>
+                <td><a class="cell" href="#2-1"></a></td>
+                <td><a class="cell" href="#2-2"></a></td>
+                <td><a class="cell" href="#2-3"></a></td>
+            </tr>
+            <tr>
+                <td><a class="cell" href="#lose"></a></td>
+                <td><a class="cell" href="#3-2"></a></td>
+                <td><a class="cell" href="#win"></a></td>
+            </tr>
+        </table>
+
+        <p id="1-2" class="hint">2</p>
+        <p id="2-1" class="hint">2</p>
+        <p id="2-2" class="hint">3</p>
+        <p id="2-3" class="hint">1</p>
+        <p id="3-2" class="hint">1</p>
+        <div id="lose" class="modal">
+            <div class="modal-content">
+                <img class="end-img" src="images/bomb.png" alt="">
+                <h3>Boom!</h3>
+                <p>You clicked the bomb</p>
+                <a href="#">Restart</a>
+            </div>
+        </div>
+        <div id="win" class="modal">
+            <div class="modal-content">
+                <img class="end-img" src="images/star.png" alt="">
+                <h3>Congratulations!</h3>
+                <p>You clicked the treasure</p>
+                <a href="#">Restart</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
