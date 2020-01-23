@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+}
+
+nav{
+    background-color: #333333;
+}
+.navbar{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+nav .logo{
+    padding-top: 15px;
+    font-family: 'Roboto', Arial;
+    font-weight: bold;
+    color: #dddddd;
+    font-size: 20px;
+    float: left;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+nav ul li{
+    padding: 20px;
+    font-family: 'Roboto', Arial;
+    color: wheat;
+    display: inline-block;
+}
+nav ul li:hover{
+    background-color: #444444;
+}
+.clear{
+    clear: both;
+}
+
+.main-image{
+    height: 600px;
+    background-image: url(images/showcase.jpg);
+    background-position: center;
+}
+.main-greeting{
+    color: #dddddd;
+    padding-top: 200px;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+}
+.main-description{
+    padding-top: 25px;
+    text-align: center; 
+    color: #dddddd;
+    font-family: 'Roboto Mono', sans-serif;
+}
+.main-button{
+    display:block;
+    width: 160px;
+    padding: 10px 5px;
+    text-decoration: none;
+    font-family: 'Roboto';
+    text-align: center;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.7);
+    margin: 30px auto;
+}
+
+.history-section{
+    height: 400px;
+}
+.history-image{
+    background: url(images/photo-1.jpg);
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.history{
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+}
+.history-heading{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+    padding: 20px;
+    padding-top: 35px;
+}
+.history-text{
+    color: white;
+    padding: 0 40px;
+    font-family: 'Roboto Mono', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1.7em;
+}
+.history-button{
+    display:block;
+    width: 160px;
+    padding: 10px 5px;
+    text-decoration: none;
+    font-family: 'Roboto';
+    text-align: center;
+    color: #333;
+    background-color: white;
+    margin: 30px auto;
+}
+
+.widgets{
+}
+.location{
+    background-color: white;
+    float: left;
+    width: 33%;
+}
+.meals{
+    background-color: orange;
+    float: left;
+    width: 33%;
+}
+.fitness-room{
+    float: left;
+    width: 33%;
+}
+h3.widget-title{
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.widget-description{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer{
+    padding: 20px;
+    background-color: #333;
+}
+footer h5{
+    color: #ddd;
+    font-family: 'Roboto Mono', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1.7em;
+    text-align: center;
+    text-transform: uppercase;
+}
