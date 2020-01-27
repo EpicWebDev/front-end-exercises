@@ -235,6 +235,7 @@ footer h5{
 }
 .contactus-section p{
     font-family: 'Roboto Mono';
+    margin-bottom: 30px;
 }
 .contactus-section label{
     display: block;
@@ -262,7 +263,11 @@ input[type=submit]{
     cursor: pointer;
     background-color: #333;
     color: white;
-    width: 200px;
+    height: 50px;
+    width: 120px;
+}
+input[type=submit]:hover{
+    background-color: #444;
 }
 input[type=submit]:focus{
     outline: none;
