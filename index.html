@@ -1,19 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <a href="gradients-and-animations/index.html">Gradients</a>
-    <a href="grid-and-animations/index.html">Grids</a>
-    <a href="hotel-website/index.html">Hotel</a>
-    <a href="ig_navbar/index.html">Navbar</a>
-    <a href="Instagram_Clone/index.html">Instagram Clone</a>
-    <a href="layout-floats/index.html">Floats</a>
-    <a href="no-js-minesweeper/index.html">No Javascript Minesweeper</a>
-    <a href="tables-and-forms/index.html">Tables and Forms</a>    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Mihai Alexandru | Full Stack Developer</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header-home">
+      <div class="container">
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-content">
+          <h1>
+            Hi, I'm Mihai
+          </h1>
+          <p class="lead" style="position: relative; left: -80px;">
+            web developer specialized in&nbsp;
+            <span
+              class="txt-type"
+              data-wait="1500"
+              data-words='["front-end development", "mobile development", "digital marketing", "wordpress Integration",
+               "SaaS applications"]'
+              style="position: absolute"
+            ></span>
+          </p>
+          <a href="work.html" class="btn-light">View My Work</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section A: Specialize -->
+    <section id="home-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="bottom-line"></div>
+        <div class="home-about">
+          <div class="about-right">
+            <p class="lead">
+              I am a 23 year old student at McGill University and a passionate
+              web developer from Montreal, Canada. My skills as a frontend and
+              backend developer allow me to help you create anything you need
+              from websites, to eCommerce stores, blogs, booking systems, or
+              even fully functional custom social networks. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Repudiandae eligendi, esse
+              fugiat quaerat a quisquam minima libero temporibus distinctio
+              numquam.
+            </p>
+          </div>
+          <div class="about-left bg-dark">
+            <h4>HTML,CSS:</h4>
+            <div class="progress">
+              <div style="width:100%"></div>
+            </div>
+            <h4>Wordpress:</h4>
+            <div class="progress">
+              <div style="width:80%"></div>
+            </div>
+            <h4>PHP:</h4>
+            <div class="progress">
+              <div style="width:70%"></div>
+            </div>
+            <h4>Javascript:</h4>
+            <div class="progress">
+              <div style="width:100%"></div>
+            </div>
+            <h4>Node.js:</h4>
+            <div class="progress">
+              <div style="width:80%"></div>
+            </div>
+            <h4>React:</h4>
+            <div class="progress">
+              <div style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: Services -->
+    <section id="home-a" class="text-center bg-light">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="bottom-line"></div>
+        <div class="specials">
+          <div>
+            <i class="fas fa-file-alt fa-2x"></i>
+            <h3>Concepting</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+              molestias repellat quibusdam adipisci quas sed ullam accusantium
+              aliquam numquam quidem.
+            </p>
+          </div>
+          <div>
+            <i class="fas fa-desktop fa-2x"></i>
+            <h3>UI/UX</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+              molestias repellat quibusdam adipisci quas sed ullam accusantium
+              aliquam numquam quidem.
+            </p>
+          </div>
+          <div>
+            <i class="fas fa-object-ungroup fa-2x"></i>
+            <h3>Visual Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+              molestias repellat quibusdam adipisci quas sed ullam accusantium
+              aliquam numquam quidem.
+            </p>
+          </div>
+          <div>
+            <i class="fas fa-thumbs-up fa-2x"></i>
+            <h3>Interaction</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+              molestias repellat quibusdam adipisci quas sed ullam accusantium
+              aliquam numquam quidem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: Stats
+    <section id="home-logos" class="text-center py-2">
+      <div class="logos">
+        <div>
+          <h2 class="logos-title">Front-end</h2>
+          <img
+            src="./img/technology-logos/HTML5_Logo_512.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/css3_logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/javascript-logo-96.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/bootstrap-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/react-logo-128.png"
+            alt="html logo"
+            class="logo"
+          />
+        </div>
+        <div>
+          <h2 class="logos-title">Back-end</h2>
+          <img
+            src="./img/technology-logos/node-js-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/mongodb-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/php-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/logo-mysql-170x115.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/java-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+        </div>
+        <div>
+          <h2 class="logos-title">Marketing</h2>
+          <img
+            src="./img/technology-logos/facebook-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/seo-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/google-ads-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+        </div>
+        <div>
+          <h2 class="logos-title">Other</h2>
+          <img
+            src="./img/technology-logos/WordPress-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/Git-Logo.png"
+            alt="html logo"
+            class="logo"
+          />
+          <img
+            src="./img/technology-logos/photoshop-logo.png"
+            alt="html logo"
+            class="logo"
+          />
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Section C: Gallery -->
+    <section id="work-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">My Work</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">
+          Check out some of my projects
+        </p>
+        <div class="items">
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item1.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item2.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">UI/UX</p>
+                <h2 class="item-text-title">World Experience</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item3.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Photography & Design</p>
+                <h2 class="item-text-title">Vanishing</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item4.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Gap INC</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item5.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Mobile UI Design</p>
+                <h2 class="item-text-title">Face THe Experience</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item6.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design Concept</p>
+                <h2 class="item-text-title">Bezier Curves</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item7.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Photography</p>
+                <h2 class="item-text-title">Dock Ponder</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item8.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Web Applications</p>
+                <h2 class="item-text-title">Restaurant App</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item9.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Social Network Concept</p>
+                <h2 class="item-text-title">FriendFeed</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section A: Contact Form -->
+    <section id="contact-a" class="text-center py-3 bg-light">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">Let's work together and grow your business</p>
+        <form method="POST" data-netlify="true" data-netlify-recaptcha="true">
+          <div class="text-fields">
+            <input
+              type="text"
+              class="text-input name-input"
+              placeholder="Name"
+              name="name"
+            />
+            <input
+              type="text"
+              class="text-input subject-input"
+              placeholder="Subject"
+              name="subject"
+            />
+            <input
+              type="email"
+              class="text-input email-input"
+              placeholder="Email Address"
+              name="email"
+            />
+            <input
+              type="text"
+              class="text-input phone-input"
+              placeholder="Phone Number"
+              name="phone"
+            />
+            <textarea
+              class="text-input message-input"
+              placeholder="Enter Message"
+              name="message"
+            ></textarea>
+            <div class="">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn-dark">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>Copyright &copy; 2019. All Rights Reserved</p>
+        <div class="social">
+          <a href="https://codepen.io/epicwebdev-the-bashful/" target="_blank"
+            ><i class="fab fa-codepen"></i
+          ></a>
+          <a href="https://github.com/EpicWebDev" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/mihai-alexandru-0b10b411a/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Type Effect Tutorial: https://www.youtube.com/watch?v=POX3dT-pB4E -->
+    <script src="js/typewriter.js"></script>
+  </body>
 </html>
