@@ -317,6 +317,10 @@ img {
   color: #ffbc00;
   padding-bottom: 0.4rem;
 }
+#home-a .specials .fab {
+  color: #ffbc00;
+  padding-bottom: 0.4rem;
+}
 #home-a .home-about {
   padding-top: 30px;
   display: flex;
