@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *, body, html{
+      margin: 0;
+      padding: 0;
+      font-family: 'Overpass', sans-serif;
+    }
+    body{
+      
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-weight: 600;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    header{
+      height: 500px;
+      background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+      border-bottom-left-radius: 80px;
+    }
+    .header-background{
+      background-image: url("images/bg-pattern-intro.svg");
+      background-position: 20% 50%;
+      background-size: 200%;
+      height: 100%;
+    }
+    .header-background nav ul{
+      display: inline-block;
+      list-style: none;
+      height: 100%;
+    }
+    nav{
+      font-weight: 600;
+    }
+    nav .left-nav{
+      display: flex;
+      align-items: center;
+    }
+    nav .right-nav{
+      display: flex;
+      align-items: center;
+    }
+    nav ul li{
+      display: inline;
+      color: hsl(0, 0%, 93%);
+      height: 100%;
+      align-items: center;
+      margin-right: 22px;
+    }
+    .dropdown{
+      display: inline-block;
+    }
+    .dropdown:hover>li{
+      cursor: pointer;
+    }
+    .dropdown:hover>li>span{
+      color: white;
+      text-decoration: underline;
+    }
+    .dropdown .menu-arrow{
+      display: inline-block;
+    }
+    .dropdown:hover .menu-arrow{
+      transform: rotate(180deg);
+    }
+    .dropdown:hover .menu-arrow svg path{
+      stroke: white;
+      opacity: 1;
+    }
+    .dropdown-content{
+      display: none;
+      position: absolute;
+      z-index: 1;
+      padding-top: 10px;
+    }
+    .card{
+      background-color: #f9f9f9;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 20px 20px;
+      border-radius: 4px;
+    }
+    .card li{
+      padding: 8px 0;
+    }
+    .card li:hover{
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .dropdown-content ul li{
+      color: black;
+      display: block;
+      list-style: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    #main-logo{
+      margin-right: 50px;
+    }
+    #login{
+      color: rgb(233, 233, 233);
+    }
+    #login:hover{
+      cursor: pointer;
+      color: white;
+    }
+    #sign-up{
+      font-weight: 600;
+      margin-left: 40px;
+      background-color: white;
+      padding: 10px 35px;
+      padding-bottom: 8px;
+      border-radius: 40px;
+      color: hsl(353, 100%, 62%);
+    }
+    #sign-up:hover{
+      cursor: pointer;
+      color: white;
+      background-color: hsl(13, 100%, 72%);
+    }
+    .header-background nav{
+      margin: auto;
+      width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header{
+      padding-top: 30px;
+    }
+    .header-main-title{
+      text-align: center;
+      margin: auto;
+      margin-top: 80px;
+      color: white;
+    }
+    .header-main-title h1{
+      font-size: 3em;
+      font-weight: 600;
+    }
+    .buttons{
+      margin-top: 50px;
+    }
+    #start{
+      text-decoration: none;
+      margin-left: 40px;
+      background-color: white;
+      padding: 15px 20px;
+      padding-bottom: 13px;
+      border-radius: 40px;
+      color: hsl(353, 100%, 62%);
+      font-weight: 600;
+    }
+    #start:hover{
+      cursor: pointer;
+      color: white;
+      background-color: hsl(13, 100%, 72%);
+    }
+    #learn-more{
+      text-decoration: none;
+      margin-left: 40px;
+      background-color: rgba(0, 0, 0, 0);;
+      padding: 15px 20px;
+      padding-bottom: 13px;
+      border-radius: 40px;
+      border: 1px solid white;
+      color: white;
+      font-weight: 600;
+    }
+    #learn-more:hover{
+      color: hsl(353, 100%, 62%);
+      background-color: white;
+    }
+
+    .container{
+      padding-top: 80px;
+      padding-bottom: 50px;
+      width: 1000px;
+      margin: auto;
+    }
+    .container h1{
+      padding-bottom: 30px;
+      text-align: center;
+      z-index: 2;
+    }
+    .row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: -80px;
+    }
+    .container-left{
+      width: 50%;
+    }
+    .container-left h3{
+      margin-bottom: 20px;
+    }
+    .container-left p{
+      margin-bottom: 20px;
+    }
+    .container-right{
+      width: 40%;
+      z-index: -10;
+    }
+    .container-right img{
+      width: 200%;
+      z-index: -1;
+    }
+
+    .phones-section{
+      padding: 20px 0;
+      height: 400px;
+      background-color: linear-gradient(hsl(240, 10%, 16%), hsl(237, 23%, 32%));
+      background-image: url("images/bg-pattern-circles.svg"), linear-gradient(90deg,hsl(240, 10%, 16%), hsl(237, 23%, 32%));
+      background-position: -30% 80%;
+      background-repeat: no-repeat;
+      border-top-right-radius: 100px;
+      border-bottom-left-radius: 100px;
+    }
+    .phones-section .container .row .container-right{
+      z-index: 2;
+    }
+    .phones-section .container{
+      padding: 0;
+    }
+    .phones-section .container .row{
+      margin-top: -80px;
+    }
+    .phones-section .container-left img{
+      margin-left: -100px;
+    }
+    .phones-section .container-right{
+      padding-left: 60px;
+      width: 50%;
+      color: white;
+    }
+    .phones-section .container-right h1{
+      text-align: left;
+    }
+
+    .laptop-section{
+      padding-top: 80px;
+    }
+    .laptop-section .container-left img{
+      margin-left: -600px;
+      width: 220%;
+      z-index: -2;
+    }
+    .laptop-section .container-right{
+      padding-left: 60px;
+      width: 50%;
+      z-index: 10;
+      color: hsl(207, 13%, 34%);
+    }
+    .laptop-section h2{
+      color: hsl(208, 62%, 31%);
+      margin-bottom: 20px;
+    }
+    .laptop-section .container-right p{
+      margin-bottom: 40px;
+      line-height: 28px;
+    }
+
+
+    .footer{
+      border-top-right-radius: 80px;
+      background-color: hsl(240, 10%, 16%);
+    }
+    .footer .container .row{
+      padding-top: 60px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .footer .container .row .fourth{
+      width: 25%;
+      height: 100%;
+      color: white;
+    }
+    .fourth span{
+      display: block;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .fourth ul li{
+      list-style: none;
+      margin-bottom: 13px;
+    }
+    .fourth ul li span{
+      display: inline-block;
+      font-weight: 100;
+      margin-bottom: 10px;
+      color: hsl(0, 0%, 63%);
+    }
+    .fourth ul li span:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-background">
+      <div class="header">
+        <nav>
+          <div class="left-nav">
+            <span id="main-logo"><img src="./images/logo.svg" alt=""></span>
+            <ul>
+              <div class="dropdown"><li><span>Product</span>&nbsp;&nbsp;<div class="menu-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></div></li>
+                <div class="dropdown-content">
+                  <div class="card">
+                    <ul>
+                      <li>Overview</li>
+                      <li>Pricing</li>
+                      <li>Marketplace</li>
+                      <li>Features</li>
+                      <li>Integrations</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown"><li><span>Company</span>&nbsp;&nbsp;<div class="menu-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></div></li>
+                <div class="dropdown-content">
+                  <div class="card">
+                    <ul>
+                      <li>About</li>
+                      <li>Team</li>
+                      <li>Blog</li>
+                      <li>Careers</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown"><li><span>Connect</span>&nbsp;&nbsp;<div class="menu-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FFF" stroke-width="2" opacity=".75" d="M1 1l4 4 4-4"/></svg></div></li>
+                <div class="dropdown-content">
+                  <div class="card">
+                    <ul>
+                      <li>Contact</li>
+                      <li>Newsletter</li>
+                      <li>LinkedIn</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="right-nav">
+            <span id="login">Login</span>
+            <span id="sign-up">Sign-up</span>
+          </div>
+        </nav>
+      </div>
+      <div class="header-main-title">
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <div class="buttons">
+          <a id="start" href="#">Start for free</a>
+          <a id="learn-more" href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Designed for the future</h1>
+    <div class="row">
+      <div class="container-left">
+        <h3>Introducing an extensible editor</h3>
+        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.</p>
+        <h3>Robust content management</h3>
+        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
+        </div>
+        <div class="container-right"><img src="./images/illustration-editor-desktop.svg" alt=""></div>
+    </div>
+  </div>
+  <div class="phones-section">
+    <div class="container">
+      <div class="row">
+        <div class="container-left">
+          <img src="./images/illustration-phones.svg" alt=""></div>
+        <div class="container-right">
+          <h1>State of the Art Infrastructure</h1>
+          <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="laptop-section">
+    <div class="container">
+      <div class="row">
+        <div class="container-left">
+          <img src="./images/illustration-laptop-desktop.svg" alt=""></div>
+        <div class="container-right">
+          <h2>Free, open, simple</h2>
+          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+          <h2>Powerful tooling</h2>
+          <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+            capable of producing even the most complicated sites.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="fourth"><img src="./images/logo.svg" alt=""></div>
+        <div class="fourth">
+          <span>Product</span>
+          <ul>
+            <li><span>Overview</span></li>
+            <li><span>Pricing</span></li>
+            <li><span>Marketplace</span></li>
+            <li><span>Features</span></li>
+            <li><span>Integrations</span></li>
+          </ul>
+        </div>
+        <div class="fourth">
+          <span>Company</span>
+          <ul>
+            <li><span>About</span></li>
+            <li><span>Team</span></li>
+            <li><span>Blog</span></li>
+            <li><span>Careers</span></li>
+          </ul>
+        </div>
+        <div class="fourth">
+          <span>Connect</span>
+          <ul>
+            <li><span>Contact</span></li>
+            <li><span>Newsletter</span></li>
+            <li><span>LinkedIn</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
