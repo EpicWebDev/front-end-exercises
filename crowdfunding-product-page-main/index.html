@@ -183,17 +183,17 @@
   <div class="card">
     <div class="backers-info">
       <div class="info-block">
-        <h1>$89,914</h1> 
+        <h1>$<span class="counter" data-target="89914">0</span></h1> 
         <p>of $100,000 backed</p>
       </div>
       <span id="vertical-line"></span>
       <div class="info-block">
-        <h1>5,007</h1> 
+        <h1><span class="counter" data-target="5007">0</span></h1> 
         <p>total backers</p>
       </div>
     <span id="vertical-line"></span>
     <div class="info-block">
-      <h1>56</h1> 
+      <h1><span class="counter" data-target="56">0</span></h1> 
       <p>days left</p>
     </div>
     </div>
@@ -256,6 +256,33 @@
   </div>
 </div>
   
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 400;
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+
+      
+      const inc = target/(speed);
+      console.log(inc);
+
+      if(count < target){
+        counter.innerText = Math.ceil(count+inc);
+        setTimeout(updateCount, 1);
+      }
+      else{
+        console.log(target);
+        counter.innerText = target;
+      }
+
+    }
+
+    updateCount();
+  });
+</script>
 
   <!-- Selection modal start -->
 
